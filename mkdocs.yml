@@ -1,11 +1,11 @@
 site_name: Tymen's Wiki
 site_author: Tymen
-site_description: >- # 项目描述
-  基于 MkDocs & Material theme 的个人知识库
-
+site_description: 人生无限
+site_url: https://wiki.untymen.com
 # 代码仓库信息
 repo_name: cannoyroy/wiki_unTymen # 仓库名称
-repo_url: https://github.com/cannoyroy/wiki_unTymen.git # 仓库地址
+repo_url: https://github.com/cannoyroy/wiki_unTymen # 仓库地址
+edit_uri: edit/main/docs # 编辑按钮的url
 
 # 版权信息
 copyright: Copyright &copy; 2024 ~ 2025 |   Jiayu Qian
@@ -99,7 +99,8 @@ plugins:
           # site_name: Infinity
           nav_translations: # 导航栏翻译，不可以有缩进
             HOME: HOME
-            你好: nihao
+            软件开发: Software Develop
+            经济学: Economics
             # ABOUT: 关于
             # SPONSORSHIP: 赞助
             # CS: 计算机
@@ -124,15 +125,36 @@ plugins:
           build: true
   
 nav: 
-  - HOME: 
-      - "index.md"
+  - HOME: "index.md"
       # - ABOUT: "./HOME/about.md"
       # - SPONSORSHIP: "./HOME/sponsorship.md"
+  - 软件开发:
+      - 通识教育:
+        - Git & Github:
+          - 第1章 Github介绍: "./软件开发/Github/第1章 Github介绍.md"
+          - 第2章 Git（导学）: "./软件开发/Github/第2章 Git（导学）.md"
+          - 第3章 使用GitHub的前期准备: "./软件开发/Github/第3章 使用GitHub的前期准备.md"
+          - 第4章 通过实际操作学习Git: "./软件开发/Github/第4章 通过实际操作学习Git.md"
+  - 硬件开发:
+      - 嵌入式:
+        - 51:
+          - 前言: "./嵌入式/51/前言.md"
+          - 单片机及开发板介绍: "./嵌入式/51/单片机及开发板介绍.md"
+          - LED: "./嵌入式/51/LED.md"
+          - 数码管: "./嵌入式/51/数码管.md"
+          - 独立按键: "./嵌入式/51/独立按键.md"
+        # - STM32:
+      # - 数字电路:
   - 经济学: 
+      - 微观经济学:
+          - 概览: "./经济学/微观经济学/notebook.md"
+          - 第1章 经济学十大原理: "./经济学/微观经济学/第1章-经济学十大原理.md"
+          - 第2章 像经济学家一样思考: "./经济学/微观经济学/第2章-像经济学家一样思考.md"
       - 量化:
           - World Quant:
             - Introduction to Alphas: "./经济学/WorldQuant/Introduction-to-Alphas.md"
             - Introduction to WorldQuantBRAIN: "./经济学/WorldQuant/Introduction-to-WorldQuant-BRAIN.md"
+
   # - CODING: 
   #     - "./CODING/coding.md"
   # - EMBEDDED-SYS: 
@@ -160,3 +182,32 @@ nav:
   # - PROJECT: 
   #     - "./PROJECT/project.md"
   #     - TECH-BLOG: "./PROJECT/TECH-BLOG/mkdocs_and_material.md"
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  
+extra_javascript:
+    - 'js/baidu-tongji.js'
