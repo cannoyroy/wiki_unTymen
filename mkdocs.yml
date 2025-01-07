@@ -1,0 +1,5 @@
+site_name: Tymen's Wiki
+nav:
+  - Home: index.md
+  - About: about.md
+theme: 'material'
