@@ -1,5 +1,162 @@
 site_name: Tymen's Wiki
-nav:
-  - Home: index.md
-  - About: about.md
-theme: 'material'
+site_author: Tymen
+site_description: >- # 项目描述
+  基于 MkDocs & Material theme 的个人知识库
+
+# 代码仓库信息
+repo_name: cannoyroy/wiki_unTymen # 仓库名称
+repo_url: https://github.com/cannoyroy/wiki_unTymen.git # 仓库地址
+
+# 版权信息
+copyright: Copyright &copy; 2024 ~ 2025 |   Jiayu Qian
+
+
+theme:
+  name: material
+  language: zh
+  features: # 功能  
+    - announce.dismiss # 可以叉掉公告的功能
+    - content.action.edit # 编辑按钮，似乎没啥用
+    - content.action.view # 查看按钮，似乎没啥用
+    - content.code.annotate # 代码注释，具体不清楚
+    - content.code.copy # 复制代码按钮
+    # - content.code.select # 选择代码按钮
+    # - content.tabs.link # 链接标签
+    - content.tooltips # 不太清楚呢这个
+    # - header.autohide # 自动隐藏header
+    - navigation.expand # 默认展开导航栏
+    - navigation.footer # 底部导航栏
+    - navigation.indexes # 索引按钮可以直接触发文件，而不是只能点击其下属选项浏览，这个功能可以给对应的section提供很好的预览和导航功能
+    # - navigation.instant # 瞬间加载 最好注释掉，多语言切换这个会导致跳回首页
+    - navigation.instant.prefetch # 预加载
+    - navigation.instant.progress # 进度条
+    - navigation.path # 导航路径， 目前好像没啥用
+    # - navigation.prune # 只构建可见的页面
+    - navigation.sections # 导航栏的section
+    - navigation.tabs # 顶级索引被作为tab
+    - navigation.tabs.sticky # tab始终可见
+    - navigation.top # 开启顶部导航栏
+    - navigation.tracking # 导航栏跟踪
+    - search.highlight # 搜索高亮
+    - search.share # 搜索分享
+    - search.suggest # 搜索建议
+    - toc.follow # 目录跟踪-页面右侧的小目录
+    # - toc.integrate # 目录跟踪集成到左侧大目录中
+  palette:
+    # - media: "(prefers-color-scheme)" # 主题颜色
+    #   scheme: slate
+    #   primary: black
+    #   accent: indigo
+    #   toggle:
+    #     icon: material/link
+    #     name: Switch to light mode
+    - media: "(prefers-color-scheme: light)" # 浅色
+      scheme: default
+      primary: white
+      accent: grey
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" # 深色
+      scheme: slate
+      primary: black
+      accent: grey
+      toggle:
+        icon: material/weather-night
+        name: Switch to system preference
+  icon: # 一些用到的icon
+    logo: logo
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+    tag:
+      default-tag: fontawesome/solid/tag
+      hardware-tag: fontawesome/solid/microchip
+      software-tag: fontawesome/solid/laptop-code
+
+# Plugins
+plugins:
+  - tags # 标签功能插件
+  - blog # 博客功能插件
+  # - rss: # rss订阅插件 - 不太懂是干嘛的目前
+  #     match_path: blog/posts/.* 
+  #     date_from_meta:
+  #       as_creation: date
+  #     categories:
+  #       - categories
+  #       - tags 
+  # # - social # 目前我开启会报错，还没研究透 
+  - search: # 搜索插件
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])' # 分隔符
+  - i18n: # 多语言插件
+      docs_structure: suffix # 抄来的，不太懂
+      fallback_to_default: true # 抄来的，不太懂
+      reconfigure_material: true # 抄来的，不太懂
+      reconfigure_search: true # 抄来的，不太懂
+      languages: # 多语言配置 - 需要小心一点
+        - locale: en
+          name: English
+          build: true # 是否构建
+          # site_name: Infinity
+          nav_translations: # 导航栏翻译，不可以有缩进
+            HOME: HOME
+            你好: nihao
+            # ABOUT: 关于
+            # SPONSORSHIP: 赞助
+            # CS: 计算机
+            # CODING: 编程
+            # EMBEDDED-SYS: 嵌入式系统
+            # DSP: 数字信号处理
+            # PERCEPTION: 感知
+            # ACTUATION: 执行
+            # IOT: 物联网
+            # CLOUD: 云
+            # CLOUD-TECH: 云技术
+            # HANDS-ON: 上手实践
+            # Have A Server: 拥有一台服务器
+            # Server Configuration: 服务器配置
+            # Get A Domain Name: 获得一个域名
+            # AI: 人工智能
+            # RESEARCH: 研究
+            # PROJECT: 项目
+        - locale: zh
+          default: true # 默认语言
+          name: 简体中文
+          build: true
+  
+nav: 
+  - HOME: 
+      - "index.md"
+      # - ABOUT: "./HOME/about.md"
+      # - SPONSORSHIP: "./HOME/sponsorship.md"
+  - 经济学: 
+      - 量化:
+          - World Quant:
+            - Introduction to Alphas: "./经济学/WorldQuant/Introduction-to-Alphas.md"
+            - Introduction to WorldQuantBRAIN: "./经济学/WorldQuant/Introduction-to-WorldQuant-BRAIN.md"
+  # - CODING: 
+  #     - "./CODING/coding.md"
+  # - EMBEDDED-SYS: 
+  #     - "./EMBEDDED-SYS/embedded-sys.md"
+  # - DSP: 
+  #     - "./DSP/dsp.md"
+  # - PERCEPTION: 
+  #     - "./PERCEPTION/perception.md"
+  # - ACTUATION: 
+  #     - "./ACTUATION/actuation.md"
+  #     - ROS: "./ACTUATION/ROS/ros.md"
+  # - IOT: 
+  #     - "./IOT/iot.md"
+  # - CLOUD: 
+  #     - "./CLOUD/cloud.md"
+  #     - CLOUD-TECH: "./CLOUD/CLOUD-TECH/cloud-tech.md"
+  #     - HANDS-ON:
+  #         - Have A Server: "./CLOUD/HANDS-ON/001-HAVE-A-SERVER/have-a-server.md"
+  #         - Server Configuration: "./CLOUD/HANDS-ON/002-SERVER-CONFIG/server-config.md"
+  #         - Get A Domain Name: "./CLOUD/HANDS-ON/003-DOMAIN-NAME/domain-name.md"
+  # - AI: 
+  #     - "./AI/ai.md"
+  # - RESEARCH: 
+  #     - "./RESEARCH/research.md"
+  # - PROJECT: 
+  #     - "./PROJECT/project.md"
+  #     - TECH-BLOG: "./PROJECT/TECH-BLOG/mkdocs_and_material.md"
