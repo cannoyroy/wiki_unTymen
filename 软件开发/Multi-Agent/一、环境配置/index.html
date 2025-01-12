@@ -1422,6 +1422,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#12-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 API设置
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1554,6 +1563,8 @@
   
     
     
+      
+        
       
         
       
@@ -1705,6 +1716,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B5%8C%E5%85%A5%E5%BC%8F/51/%E5%AE%9A%E6%97%B6%E5%99%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    定时器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1784,6 +1816,8 @@
   
     
     
+      
+        
       
         
       
@@ -1880,6 +1914,27 @@
   
   <span class="md-ellipsis">
     第2章 像经济学家一样思考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BB%8F%E6%B5%8E%E5%AD%A6/%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/%E7%AC%AC3%E7%AB%A0-%E7%9B%B8%E4%BA%92%E4%BE%9D%E5%AD%98%E6%80%A7%E4%B8%8E%E8%B4%B8%E6%98%93%E7%9A%84%E5%A5%BD%E5%A4%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第3章 相互依存性与贸易的好处
   </span>
   
 
@@ -2089,6 +2144,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#12-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 API设置
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2165,11 +2229,25 @@ windows
 poetry<span class="w"> </span>shell
 </code></pre></div></p>
 </li>
+<li>
+<p>安装左右依赖
+<div class="highlight"><pre><span></span><code><span class="c1"># 从源代码安装依赖环境，大约需要 90 秒</span>
+poetry<span class="w"> </span>install<span class="w"> </span>-E<span class="w"> </span>all<span class="w">    </span>
+</code></pre></div></p>
+</li>
 </ol>
 <div class="admonition tips">
 <p class="admonition-title">Tips</p>
-<p><code>python3.10</code>请根据你自己的python版本填写</p>
+<p><code>python3.10</code>请根据你自己的python版本填写，并且要求符合项目规定。</p>
+<p>可以在python官网下载 <strong>embed</strong> 版本，直接嵌入到当前项目，并使用<code>poetry env use (python.exe的位置)</code></p>
+<p>环境激活在最新版本中，不能直接使用<code>poetry shell</code>，因为这需要特定的插件</p>
+<p>请使用<code>poetry env activate</code></p>
+<div class="highlight"><pre><span></span><code>PS1&gt;<span class="w"> </span>Invoke-Expression<span class="w"> </span><span class="o">(</span>poetry<span class="w"> </span>env<span class="w"> </span>activate<span class="o">)</span>
+<span class="o">(</span>test-project-for-test<span class="o">)</span><span class="w"> </span>PS1&gt;<span class="w">  </span><span class="c1"># Virtualenv entered</span>
+</code></pre></div>
 </div>
+<h2 id="12-api">1.2 API设置<a class="headerlink" href="#12-api" title="Permanent link">&para;</a></h2>
+<p><a href="https://zhuanlan.zhihu.com/p/679243801">再见 Pip 和 Conda！Poetry 才是 Python 依赖管理的最好选择！ - 知乎</a></p>
 
 
 
