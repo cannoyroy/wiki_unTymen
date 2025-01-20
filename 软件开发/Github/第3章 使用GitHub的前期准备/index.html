@@ -2295,6 +2295,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
       
@@ -2405,6 +2411,69 @@
   
   <span class="md-ellipsis">
     创新策略
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%8A%98%E8%85%BE%E4%B8%8D%E6%AD%A2/%E5%88%9B%E4%B8%9A/%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    用户画像
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%8A%98%E8%85%BE%E4%B8%8D%E6%AD%A2/%E5%88%9B%E4%B8%9A/%E7%94%A8%E6%88%B7%E8%AE%BF%E8%B0%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    用户访谈
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%8A%98%E8%85%BE%E4%B8%8D%E6%AD%A2/%E5%88%9B%E4%B8%9A/%E8%AE%BF%E8%B0%88%E6%95%B0%E6%8D%AE%E6%A2%B3%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    访谈数据梳理
   </span>
   
 
@@ -2548,34 +2617,36 @@
 </li>
 <li>
 <p>设置 SSH Key</p>
+<p>GitHub 上连接已有仓库时的认证，是通过使用了 SSH 的公开密钥认证方式进行的。现在让我们来创建公开密钥认证所需的 SSH Key，并将其添加至 GitHub。</p>
+<p>id_rsa 文件是私有密钥，id_rsa.pub 是公开密钥。</p>
 </li>
 </ul>
-<p>GitHub 上连接已有仓库时的认证，是通过使用了 SSH 的公开密钥认证方式进行的。现在让我们来创建公开密钥认证所需的 SSH Key，并将其添加至 GitHub。</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
-Generating<span class="w"> </span>public/private<span class="w"> </span>rsa<span class="w"> </span>key<span class="w"> </span>pair.
-Enter<span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>which<span class="w"> </span>to<span class="w"> </span>save<span class="w"> </span>the<span class="w"> </span>key
-<span class="o">(</span>/Users/your_user_directory/.ssh/id_rsa<span class="o">)</span>:<span class="w"> </span>按回车键
-Enter<span class="w"> </span>passphrase<span class="w"> </span><span class="o">(</span>empty<span class="w"> </span><span class="k">for</span><span class="w"> </span>no<span class="w"> </span>passphrase<span class="o">)</span>:<span class="w"> </span>输入密码
-Enter<span class="w"> </span>same<span class="w"> </span>passphrase<span class="w"> </span>again:<span class="w"> </span>再次输入密码
-Your<span class="w"> </span>identification<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>saved<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/your_user_directory/.ssh/id_rsa.
-Your<span class="w"> </span>public<span class="w"> </span>key<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>saved<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/your_user_directory/.ssh/id_rsa.pub.
-The<span class="w"> </span>key<span class="w"> </span>fingerprint<span class="w"> </span>is:
-<span class="w"> </span>fingerprint值<span class="w"> </span>your_email@example.com
-The<span class="w"> </span>key<span class="err">&#39;</span>s<span class="w"> </span>randomart<span class="w"> </span>image<span class="w"> </span>is:
-+--<span class="o">[</span><span class="w"> </span>RSA<span class="w"> </span><span class="m">2048</span><span class="o">]</span>----+
-<span class="p">|</span><span class="w"> </span>.+<span class="w"> </span>+<span class="w"> </span><span class="p">|</span>
-<span class="p">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>o<span class="w"> </span>O<span class="w"> </span>.<span class="w"> </span><span class="p">|</span>
-……
+<div class="highlight"><pre><span></span><code><span class="w">    </span>$<span class="w"> </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+<span class="w">    </span>Generating<span class="w"> </span>public/private<span class="w"> </span>rsa<span class="w"> </span>key<span class="w"> </span>pair.
+<span class="w">    </span>Enter<span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>which<span class="w"> </span>to<span class="w"> </span>save<span class="w"> </span>the<span class="w"> </span>key
+<span class="w">    </span><span class="o">(</span>/Users/your_user_directory/.ssh/id_rsa<span class="o">)</span>:<span class="w"> </span>按回车键
+<span class="w">    </span>Enter<span class="w"> </span>passphrase<span class="w"> </span><span class="o">(</span>empty<span class="w"> </span><span class="k">for</span><span class="w"> </span>no<span class="w"> </span>passphrase<span class="o">)</span>:<span class="w"> </span>输入密码
+<span class="w">    </span>Enter<span class="w"> </span>same<span class="w"> </span>passphrase<span class="w"> </span>again:<span class="w"> </span>再次输入密码
+<span class="w">    </span>Your<span class="w"> </span>identification<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>saved<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/your_user_directory/.ssh/id_rsa.
+<span class="w">    </span>Your<span class="w"> </span>public<span class="w"> </span>key<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>saved<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/your_user_directory/.ssh/id_rsa.pub.
+<span class="w">    </span>The<span class="w"> </span>key<span class="w"> </span>fingerprint<span class="w"> </span>is:
+<span class="w">     </span>fingerprint值<span class="w"> </span>your_email@example.com
+<span class="w">    </span>The<span class="w"> </span>key<span class="err">&#39;</span>s<span class="w"> </span>randomart<span class="w"> </span>image<span class="w"> </span>is:
+<span class="w">    </span>+--<span class="o">[</span><span class="w"> </span>RSA<span class="w"> </span><span class="m">2048</span><span class="o">]</span>----+
+<span class="w">    </span><span class="p">|</span><span class="w"> </span>.+<span class="w"> </span>+<span class="w"> </span><span class="p">|</span>
+<span class="w">    </span><span class="p">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>o<span class="w"> </span>O<span class="w"> </span>.<span class="w"> </span><span class="p">|</span>
+<span class="w">    </span>……
 </code></pre></div>
-<p>id_rsa 文件是私有密钥，id_rsa.pub 是公开密钥。</p>
 <ul>
-<li>添加公开密钥</li>
-</ul>
+<li>
+<p>添加公开密钥</p>
 <p>在 GitHub 中添加公开密钥，今后就可以用私有密钥进行认证了。</p>
 <p>点击右上角的账户设定按钮（Account Settings），选择 SSH Keys 菜单。</p>
 <p>添加成功之后，创建账户时所用的邮箱会接到一封提示“公共密钥添加完成”的邮件。</p>
-<ul>
-<li>使用社区功能</li>
+</li>
+<li>
+<p>使用社区功能</p>
+</li>
 </ul>
 <h3 id="_2">实践<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h3 id="new-repository">New repository——创建仓库<a class="headerlink" href="#new-repository" title="Permanent link">&para;</a></h3>
@@ -2594,26 +2665,28 @@ The<span class="w"> </span>key<span class="err">&#39;</span>s<span class="w"> </
 </li>
 <li>
 <p>Add .gitignore</p>
+<p>下方左侧的下拉菜单非常方便，通过它可以在初始化时自动生成 .gitignore 文件。这个设定会帮我们把不需要在 Git 仓库中进行版本管理的文件记录在 .gitignore 文件中，省去了每次根据框架进行设置的麻烦。下拉菜单中包含了主要的语言及框架，选择今后将要使用的即可。</p>
+</li>
+<li>
+<p>Add a license——选择要添加的许可协议文件</p>
+<p>如果这个仓库中包含的代码已经确定了许可协议，那么请在这里进行选择。随后将自动生成包含许可协议内容的 LICENSE 文件，用来表明该仓库内容的许可协议。</p>
 </li>
 </ul>
-<p>下方左侧的下拉菜单非常方便，通过它可以在初始化时自动生成 .gitignore 文件。这个设定会帮我们把不需要在 Git 仓库中进行版本管理的文件记录在 .gitignore 文件中，省去了每次根据框架进行设置的麻烦。下拉菜单中包含了主要的语言及框架，选择今后将要使用的即可。</p>
-<ul>
-<li>Add a license——选择要添加的许可协议文件</li>
-</ul>
-<p>如果这个仓库中包含的代码已经确定了许可协议，那么请在这里进行选择。随后将自动生成包含许可协议内容的 LICENSE 文件，用来表明该仓库内容的许可协议。</p>
 <h3 id="_3">连接仓库<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li>README.md</li>
-</ul>
+<li>
+<p>README.md</p>
 <p>README.md 文件的内容会自动显示在仓库的首页当中。因此，人们一般会在这个文件中标明本仓库所包含的软件的概要、使用流程、许可协议等信息。使用Markdown 语法进行描述，添加标记，提高可读性。</p>
-<ul>
-<li>GitHub Flavored Markdown（GFM）</li>
-</ul>
+</li>
+<li>
+<p>GitHub Flavored Markdown（GFM）</p>
 <p>在 GitHub 上进行交流时用到的 Issue、评论、Wiki，都可以用Markdown 语法表述，从而进行标记。</p>
+</li>
+</ul>
 <h3 id="_4">公开代码<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>clone 已有仓库</li>
-</ul>
+<li>
+<p>clone 已有仓库</p>
 <p>将尝试在已有仓库中添加代码并加以公开。首先将已有仓库 clone 到身边的开发环境中。</p>
 <p><img alt="image-20241218111829297" src="image-20241218111829297.png" /></p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:hirocastest/Hello-World.git
@@ -2624,9 +2697,9 @@ Receiving<span class="w"> </span>objects:<span class="w"> </span><span class="m"
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>Hello-World
 </code></pre></div>
 <p>这里会要求输入 GitHub 上设置的公开密钥的密码。认证成功后，仓库便会被 clone 至仓库名后的目录中。将想要公开的代码提交至这个仓库再 push 到 GitHub 的仓库中，代码便会被公开。</p>
-<ul>
-<li>提交</li>
-</ul>
+</li>
+<li>
+<p>提交</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>hello_world.php
 $<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add hello world script by php&quot;</span>
 <span class="o">[</span>master<span class="w"> </span>d23b909<span class="o">]</span><span class="w"> </span>Add<span class="w"> </span>hello<span class="w"> </span>world<span class="w"> </span>script<span class="w"> </span>by<span class="w"> </span>php
@@ -2641,9 +2714,9 @@ Author:<span class="w"> </span>hirocastest<span class="w"> </span>&lt;hohtsuka@g
 Date:<span class="w"> </span>Tue<span class="w"> </span>May<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">14</span>:36:58<span class="w"> </span><span class="m">2012</span><span class="w"> </span>+0900
 <span class="w"> </span>Add<span class="w"> </span>hello<span class="w"> </span>world<span class="w"> </span>script<span class="w"> </span>by<span class="w"> </span>php
 </code></pre></div>
-<ul>
-<li>进行 push</li>
-</ul>
+</li>
+<li>
+<p>进行 push</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>push
 Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">4</span>,<span class="w"> </span><span class="k">done</span>.
 Delta<span class="w"> </span>compression<span class="w"> </span>using<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span><span class="m">4</span><span class="w"> </span>threads.
@@ -2654,6 +2727,8 @@ To<span class="w"> </span>git@github.com:hirocastest/Hello-World.git
 <span class="w"> </span>46ff713..d23b909<span class="w"> </span>master<span class="w"> </span>-&gt;<span class="w"> </span>master
 </code></pre></div>
 <p>这样一来代码就在 GitHub 上公开了。</p>
+</li>
+</ul>
 
 
 
