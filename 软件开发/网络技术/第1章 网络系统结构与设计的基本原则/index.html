@@ -18,7 +18,7 @@
         <link rel="prev" href="../../%E8%BD%AF%E8%80%83/1.1%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
       
       
-        <link rel="next" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/">
+        <link rel="next" href="../%E7%AC%AC2%E7%AB%A0%20%E4%B8%AD%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E4%BD%93%E8%A7%84%E5%88%92%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -3654,6 +3654,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
       
@@ -3958,6 +3964,69 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC2%E7%AB%A0%20%E4%B8%AD%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E4%BD%93%E8%A7%84%E5%88%92%E4%B8%8E%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第2章 中小型网络系统总体规划与设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC3%E7%AB%A0%20IP%E5%9C%B0%E5%9D%80%E8%A7%84%E5%88%92%E6%8A%80%E6%9C%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第3章 IP地址规划技术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC4%E7%AB%A0%20%E8%B7%AF%E7%94%B1%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第4章 路由设计基础
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -8411,21 +8480,21 @@
 <p>想象一下，这条环形高速公路是免费共享的，路上有很多个城镇（网络节点）。</p>
 <ul>
 <li>
-<p><strong>城镇A</strong> 突然有**海量**的汽车（数据）要上路，目的地是**城镇D**（几乎要跑大半个圈）。</p>
+<p><strong>城镇A</strong> 突然有 <strong>海量</strong> 的汽车（数据）要上路，目的地是 <strong>城镇D</strong>（几乎要跑大半个圈）。</p>
 </li>
 <li>
 <p>一瞬间，从A到B到C再到D的路段，全被A的车给占满了，堵得水泄不通。</p>
 </li>
 <li>
-<p>这时，<strong>城镇B</strong> 只想送一辆小货车（少量数据）到**城镇C**，路程很短。但它发现，通往C的路已经被A的庞大车队堵死了，自己的车根本**上不了路**！</p>
+<p>这时，<strong>城镇B</strong> 只想送一辆小货车（少量数据）到 <strong>城镇C</strong>，路程很短。但它发现，通往C的路已经被A的庞大车队堵死了，自己的车根本 <strong>上不了路</strong>！</p>
 </li>
 </ul>
 <p>在这个场景里，城镇B就遇到了“<strong>饿死</strong>”（Starvation）现象。虽然它需要的资源很少，但因为A太“霸道”，导致B完全无法使用公路。<strong>这就是“不公平”</strong>。</p>
 <p>这个问题的根源是：<strong>谁离得近，谁嗓门大，谁就可能霸占所有资源，导致别人没法用。</strong></p>
 <p><strong>第二步：解决问题！【SRP公平算法】登场</strong></p>
-<p>为了解决这种“不公平”，工程师们设计了一套智能的交通规则，就是**SRP公平算法 (SRP Fairness Algorithm)**。</p>
+<p>为了解决这种“不公平”，工程师们设计了一套智能的交通规则，就是 <strong>SRP公平算法 (SRP Fairness Algorithm)</strong>。</p>
 <p>SRP的全称是“<strong>空间重用协议</strong> (Spatial Reuse Protocol)”，它也是一种用于环形网络的技术，和我们之前聊的RPR是“亲戚”。这个“公平算法”是它的核心灵魂。</p>
-<p>这个算法可以理解为一个**智能的、自动化的“环线交通协管员”系统**。它的工作流程是这样的：</p>
+<p>这个算法可以理解为一个 <strong>智能的、自动化的“环线交通协管员”系统</strong>。它的工作流程是这样的：</p>
 <ol>
 <li>
 <p>发现拥堵和不公（B发现自己上不了路）</p>
@@ -8446,13 +8515,13 @@
 </ol>
 <p><strong>总结一下</strong></p>
 <p><strong>什么叫【SRP公平算法】？</strong></p>
-<p>它就是一套**自动防止“路霸”的交通规则**。</p>
+<p>它就是一套 <strong>自动防止“路霸”的交通规则</strong>。</p>
 <ul>
 <li>
 <p><strong>目标：</strong> 防止环形网络中的某个节点（用户）因发送过多数据，而导致其他节点无法正常通信（即“饿死”现象）。</p>
 </li>
 <li>
-<p><strong>原理：</strong> 当某个节点发现网络拥堵，自己被“饿死”时，它会**向上游（逆着数据流动的方向）发送一个控制信号**。这个信号会通知造成拥堵的源头节点“你该减速了！”。</p>
+<p><strong>原理：</strong> 当某个节点发现网络拥堵，自己被“饿死”时，它会 <strong>向上游（逆着数据流动的方向）发送一个控制信号</strong>。这个信号会通知造成拥堵的源头节点“你该减速了！”。</p>
 </li>
 <li>
 <p><strong>效果：</strong> 强制“路霸”节点降低自己的流量，从而释放出网络带宽，让其他节点也能公平地使用网络。它确保了在网络繁忙时，大家都能分到一小块蛋糕，而不是让一个人把整个蛋糕都抢走。</p>
@@ -8743,13 +8812,13 @@ DWDN（密集光波复用）是一种光纤数据传输技术，属于光纤接�
         
         
           
-          <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/" class="md-footer__link md-footer__link--next" aria-label="下一页: 图的存储">
+          <a href="../%E7%AC%AC2%E7%AB%A0%20%E4%B8%AD%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E4%BD%93%E8%A7%84%E5%88%92%E4%B8%8E%E8%AE%BE%E8%AE%A1/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第2章 中小型网络系统总体规划与设计">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                图的存储
+                第2章 中小型网络系统总体规划与设计
               </div>
             </div>
             <div class="md-footer__button md-icon">
