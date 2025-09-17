@@ -4089,11 +4089,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%A4%A7%E9%A2%98%E8%8D%9F%E8%90%83/" class="md-nav__link">
+      <a href="../%E7%BB%BC%E5%90%88%E9%A2%98/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    大题荟萃
+    综合题
   </span>
   
 
@@ -8158,6 +8158,15 @@
 
   <h1>第6章 交换机及其配置</h1>
 
+<ul>
+<li>三种交换模式：快速转发交换模式、碎片丢弃交换模式、存储转发交换模式</li>
+<li>虚拟局域网技术<ul>
+<li>什么协议不受交换机厂商的限制</li>
+<li>VLAN ID与Vlan名，标准范围，保留范围，扩展范围，以太网、FDDU、Ethernet的ID范围，默认Vlan名，VLAN划分方式</li>
+<li></li>
+</ul>
+</li>
+</ul>
 <p>局域网交换机是一种基于MAC地址识别，完成转发数据帧功能的一种网络连接设备。</p>
 <p>它工作在数据链路层，根据进入端口数据帧中的MAC地址进行数据帧的过滤、转发。</p>
 <p>局域网交换机的基本功能可概括为以下几点：</p>
@@ -8227,8 +8236,7 @@
 <ul>
 <li>Vlan通常用VLAN ID和VLAN name标识</li>
 <li>IEEE802.1Q协议规定，用于标识VLAN的VLAN ID用12bit表示，Vlan名最常用32个字符表示</li>
-<li>IEEE802.1Q协议规定，可以支持4096个VLAN，其中1~1005是标
-准范围，1006<sub>1024为保留范围，1025</sub>4096是扩展范围</li>
+<li>IEEE802.1Q协议规定，可以支持4096个VLAN，其中1~1005是标准范围，1006~1024为保留范围，1025~4096是扩展范围</li>
 <li><strong>以太网的VLAN ID范围是 1~1000，FDDU和令牌环网是100-1005，可用于Ethernet的VLAN ID为2~1000</strong></li>
 <li>创建VLAN时，如果没有给定名字，则默认VLAN00XXX（XXX表示VLAN ID）</li>
 </ul>
@@ -8284,13 +8292,13 @@
 <li>设置系统时间：<code>clock set [hh:mm:ss] [dd/mm/yy]</code></li>
 </ul>
 </li>
-<li>Catalyst 6500（CatOS）<ul>
+<li><strong>Catalyst 6500</strong>（CatOS）<ul>
 <li>设置系统时间：<code>set time [day_of_week] [mm/dd/yy] [hh:mm:ss]</code></li>
 <li>
 <p>配置设备管理IP地址：<code>set interface sc0 &lt;ip_addr&gt; &lt;ip_mask&gt; &lt;ip_addr&gt; (broadcast address)</code></p>
 <ul>
 <li>
-<p>IP地址配置：</p>
+<p>IP地址配置（广播地址可由IP地址计算而来，如大题第一题）：</p>
 <div class="highlight"><pre><span></span><code>Switch-6509-TEST &gt; (enable) set interface sc0 192.168.1.1 255.255.255.0 192.168.1.255 
 (设置 IP 地址为 192.168.1.1, 子网掩码为 255.255.255.0, 广播地址为 192.168.1.255)
 Switch-PHY 6509 &gt; (enable)
@@ -8364,7 +8372,7 @@ Switch-3528-TEST<span class="w"> </span><span class="o">(</span>config-if<span c
 <p>VTP（VLAN Trunking Protocol）是VLAN中继协议，也被称为VLAN干道协议。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>不同厂家的交换机互联要实现VLANTrunk时，必须封装dot1q协议</p>
+<p>不同厂家的交换机互联要实现VLANTrunk时，必须封装 <strong>dot1q</strong> 协议</p>
 </div>
 <details class="question">
 <summary>下图中交换机同属一个VTP域。除交换机B外，所有交换机的VLAN配置都与交换机A相同。交换机A和B的VTP工作模式的正确配置是（）</summary>

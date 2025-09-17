@@ -4179,11 +4179,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%A4%A7%E9%A2%98%E8%8D%9F%E8%90%83/" class="md-nav__link">
+      <a href="../%E7%BB%BC%E5%90%88%E9%A2%98/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    大题荟萃
+    综合题
   </span>
   
 
@@ -8338,6 +8338,9 @@
 
   <h1>第1章 网络系统结构与设计的基本原则</h1>
 
+<ul>
+<li>IEEE 802.11哪项标准将速率提升到54Mbps</li>
+</ul>
 <h2 id="11">1.1 计算机网络的基本结构<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
 <p>资源子网：负责全网的数据处理业务，负责向网络用户提供各种网络资源与网络服务。</p>
 <p>通信子网：负责进行数据的传输、转发等通信处理任务，由通信控制处理机</p>
@@ -8423,7 +8426,7 @@
 </ul>
 <h2 id="16">1.6 宽带城域网的结构<a class="headerlink" href="#16" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>宽带城域网以TCPIP路由协议为基础，以宽带光传输网络为开放平台。SDN技术主要应用在广域网当中。</p>
+<p>宽带城域网以TCP/IP路由协议为基础，以宽带光传输网络为开放平台。SDN技术主要应用在广域网当中。</p>
 </blockquote>
 <h3 id="_3">宽带城域网的逻辑结构<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>完整的宽带城域网主要包括网络平台、业务平台、管理平台3个平台与一个城市宽带出口。</p>
@@ -8618,11 +8621,11 @@
 <li>能够方便、快速、灵活地适应用户和业务的扩展</li>
 </ul>
 <h3 id="_5">基于弹性分组环技术的宽带城域网<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>弹性分组换（Resilient Packet Ring, RPR）是一种直接在光纤上高效传输IP分组的传输技术，限制数据帧只在源节点和目的节点之间的光纤段上传输。</p>
+<p>弹性分组环（Resilient Packet Ring, RPR）是一种直接在光纤上高效传输IP分组的传输技术，限制数据帧只在源节点和目的节点之间的光纤段上传输。</p>
 <ul>
-<li>主要拓扑构型为环形结构，内外环都用统计复用的方法传输IP分组（而不是频分复用），2个RPR结点之间的裸光纤最大长度为100公里</li>
+<li>主要拓扑构型为环形结构，内外环都用 <strong>统计复用</strong> 的方法传输IP分组（而不是频分复用），2个RPR结点之间的裸光纤最大长度为100公里</li>
 <li>公平性好
-    每个结点都执行SRP公平算法</li>
+    每个结点都执行 <strong>SRP</strong> 公平算法</li>
 <li>
 <p>带宽利用率高
     与FDDI相同，具有双环结构，并用双环结构传输数据分组和控制分组。节点向目的节点成功发出的数据顿要由目的节点从环中收回。</p>
@@ -8761,7 +8764,7 @@
 <li>多用户对有限带宽资源的争用出现拥塞，可能会影响接入速率；</li>
 <li>建设 HFC 网或改造原有的有线电视系统使之具备双向传输能力的造价相当昂贵。</li>
 </ul>
-<p><strong>电缆调制解调器（Cable Modem）</strong> 是专门为利用有线电视网进行传输数据设计的，把用户计算机与有线电视同轴电缆连接起来。</p>
+<p><strong>电缆调制解调器（Cable Modem）</strong> 是专门为利用有线电视网进行传输数据设计的，把 <strong>用户计算机与有线电视</strong> 同轴电缆连接起来。</p>
 <p>Cable Modem利用频分复用的方法，将双向信道分为：从计算机到终端方向的为上行信道，从网络到计算机终端方向的为下行信道。传播速率可达10~36Mbps。</p>
 <p>传输方式上，Cable Modem分为对称式和非对称式两类。</p>
 <h4 id="_7">光纤接入技术<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
@@ -8845,6 +8848,7 @@ DWDN（密集光波复用）是一种光纤数据传输技术，属于光纤接�
 </table>
 </details>
 <p><strong>2.IEEE 802.11标准与无限局域网</strong></p>
+<p>IEEE 802.11 在MAC子层引入了一个RTS/CTS选项</p>
 <table>
 <thead>
 <tr>
@@ -8856,7 +8860,7 @@ DWDN（密集光波复用）是一种光纤数据传输技术，属于光纤接�
 <tbody>
 <tr>
 <td>IEEE 802.11</td>
-<td>定义了使用红外、跳频扩频与直接序列扩频技术</td>
+<td>定义了使用红外、跳频扩频与直接序列扩频技术 <strong>两个扩频技术和一个红外传播规范</strong></td>
 <td>1Mbit/s 或 2Mbit/s</td>
 </tr>
 <tr>

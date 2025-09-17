@@ -4206,11 +4206,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%A4%A7%E9%A2%98%E8%8D%9F%E8%90%83/" class="md-nav__link">
+      <a href="../%E7%BB%BC%E5%90%88%E9%A2%98/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    大题荟萃
+    综合题
   </span>
   
 
@@ -8392,6 +8392,15 @@
 
   <h1>第9章 计算机网络环境及应用系统的安装与调试</h1>
 
+<div class="admonition note">
+<p class="admonition-title">本章锚点</p>
+<ul>
+<li>WWW服务器：建立web站点，设置web站点；性能选项，主目录选项，目录安全选项，网站选项（网站标识）</li>
+<li>FTP服务器：端口（默认、二种连接），多站点-域-虚拟服务器，域的标识，创建新域，域的配置，访问域的先决条件，用户创建，公共访问，匿名认证，服务器最大用户数，最大上传或下载速度，用户配额选项，测试FTP服务器</li>
+<li>E-mail服务器：用户自行注册，快速设置向导创建用户，邮件路由与DNS配置，邮件收发协议，服务器管理及其工具，二大设置，测试是否正常工作</li>
+<li>DHCP服务器：作用域（功能、激活、多网段、配置信息、租约期限单位），排除（方法，关键点），租约（默认租约期、时间单位），保留</li>
+</ul>
+</div>
 <h2 id="91-dns">9.1 DNS服务器<a class="headerlink" href="#91-dns" title="Permanent link">&para;</a></h2>
 <p>DNS（Domain Name System）域名系统，将域名和IP地址相互映射的分布式数据库。</p>
 <p>域名解析就是把网站域名或主机名转化为IP地址的过程，方法有二：</p>
@@ -8432,7 +8441,7 @@
 <li>邮件交换器资源（MX）记录（Mail Exchanger Record）</li>
 </ul>
 </li>
-<li>转发器：网络上的DNS服务器（不是路由器），用于外部域名的DNS查询，将外部域名的DNS查询转发给改DNS服务器</li>
+<li>转发器：网络上的DNS服务器（不是路由器），用于外部域名的DNS查询，将外部域名的DNS查询转发给该DNS服务器</li>
 </ul>
 <p><strong>记录的生命周期：生存时间 (TTL)</strong></p>
 <ul>
@@ -8473,7 +8482,7 @@
 <p>route: 用于 <strong>显示或修改本地IP路由表条目</strong>。</p>
 </li>
 <li>
-<p>pathping: 结合了 ping 和 tracert 的功能，它会向目标地址发送报文，并 <strong>报告沿途每个路由器的数据包丢失情况</strong>，是诊断网络路径问题的有力工具。</p>
+<p>pathping: 结合了 ping 和 tracert 的功能，它会向目标地址发送报文，并 <strong>报告沿途每个路由器的数据包丢失情况</strong>，是诊断网络路径问题的有力工具。检测DNS服务器是否工作正常</p>
 </li>
 </ul>
 </li>
@@ -8501,12 +8510,14 @@
 <li>作为 <strong>网络标识</strong> 的有 IP 地址、非 TCP 端口号、主机头、网站描述。(没有主目录)  </li>
 </ul>
 <p>【可】TCP端口、SSL端口
-【不可】HTTP头
-8. 在 Windows2003 中添加操作系统组件 IIS 就可实现 Web 服务， 建立 Web 站点前必须安装。<br />
-9. Web 站点可以动态获取 IP 地址。在一台服务器上可构建多个 网站。<br />
-10. 缺省情况下 Windows2003 系统没有安装 DNS 服务。
-11. IIS6.0可以用虚拟服务器的方法，在一台服务器上构建多个网站，这些网站用上述三种网络标识进行区分。</p>
+【不可】HTTP头</p>
 </li>
+<li>
+<p>在 Windows2003 中添加操作系统组件 IIS 就可实现 Web 服务， 建立 Web 站点前必须安装。  </p>
+</li>
+<li>Web 站点可以动态获取 IP 地址。在一台服务器上可构建多个网站。  </li>
+<li>缺省情况下 Windows2003 系统没有安装 DNS 服务。</li>
+<li>IIS6.0可以用虚拟服务器的方法，在一台服务器上构建多个网站，这些网站用上述三种网络标识进行区分。</li>
 </ol>
 <details class="question">
 <summary>一网站创建时，输入的网站IP地址为<code>192.168.1.1</code>，网站的TCP端口为<code>8080</code>，网站的主机头为<code>www.example.com</code>。访问该网站时，在浏览器的地址栏中输入的可以是 ( )。<br>Ⅰ. <code>www.example.com</code>  <br>Ⅱ. <code>192.168.1.1</code>  <br>Ⅲ. <code>http://192.168.1.1:8080</code></summary>
@@ -8652,8 +8663,10 @@
 <p><strong>服务器配置与域配置</strong></p>
 <ul>
 <li>首次访问：初始状态下没有设置管理员密码，可以直接进入 Serv-U 管理程序。</li>
-<li>网络配置（IP地址绑定与动态环境）：FTP 服务器可以使用动态 IP 地址，使用动态 IP 地址时，服务器 IP 地址应配置为空，为空代表全部 IP 地址，服务器有多个 IP 地址时，IP 地址为空比较方便（不需分别添加，空不是 0.0.0.0）。
-    【错误】配置服务器IP地址时，多个IP地址需分别添加。</li>
+<li>
+<p>网络配置（IP地址绑定与动态环境）：FTP 服务器可以使用动态 IP 地址，使用动态 IP 地址时，服务器 IP 地址应配置为空，为空代表全部 IP 地址，服务器有多个 IP 地址时，IP 地址为空比较方便（不需分别添加，空不是 0.0.0.0）。</p>
+<p>【错误】配置服务器IP地址时，多个IP地址需分别添加。</p>
+</li>
 <li>
 <p>托管多个站点：服务器可构建多个由 IP 地址和端口号识别的虚拟服务器，每个虚拟服务器（域）由 IP 地址和端口号唯一识别，而不是只依靠 IP 地址。</p>
 <blockquote>
@@ -8706,7 +8719,6 @@
 <li>SecureCRT命令</li>
 </ul>
 </li>
-<li></li>
 </ul>
 <p><strong>高级安全与配置细节澄清</strong></p>
 <ul>
@@ -8829,7 +8841,7 @@
 </ul>
 <h2 id="95-dhcp">9.5 DHCP服务器<a class="headerlink" href="#95-dhcp" title="Permanent link">&para;</a></h2>
 <ul>
-<li>ipconfig/release后，<code>IP Address = 127.0.01</code>，<code>Subnet Mask = 255.255.255.255</code></li>
+<li>ipconfig/release后，<code>IP Address = 0.0.0.0</code>，<code>Subnet Mask = 0.0.0.0</code></li>
 <li>ipconfid/all，查看客户机获取的地址租约及其他配置信息情况，用于地址租约续约</li>
 </ul>
 <p>DHCP（Dynamic Host Configuration Protocol）动态主机配置协议</p>

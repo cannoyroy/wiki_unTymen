@@ -3897,7 +3897,7 @@
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      管理子系统
+      干线子系统
     </span>
   </a>
   
@@ -3906,7 +3906,7 @@
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      干线子系统
+      管理子系统
     </span>
   </a>
   
@@ -4056,11 +4056,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%A4%A7%E9%A2%98%E8%8D%9F%E8%90%83/" class="md-nav__link">
+      <a href="../%E7%BB%BC%E5%90%88%E9%A2%98/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    大题荟萃
+    综合题
   </span>
   
 
@@ -8029,7 +8029,7 @@
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      管理子系统
+      干线子系统
     </span>
   </a>
   
@@ -8038,7 +8038,7 @@
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      干线子系统
+      管理子系统
     </span>
   </a>
   
@@ -8092,6 +8092,15 @@
 
   <h1>第5章 局域网技术基础及应用</h1>
 
+<div class="admonition note">
+<p class="admonition-title">本章锚点</p>
+<ul>
+<li>网桥的性能指标、转发数据依据，交换机（二层维护什么、三层），透明网桥的作用</li>
+<li>综合布线系统：组合配置包含的内容，二种双绞线</li>
+<li>综合布线系统子系统：六大子系统，双绞线和信息插座，建筑群子系统的三种布线，干线的二种方式，水平子系统的特殊方案，信息插座的二种类型</li>
+<li>当前流行的STP（生成树协议）标准</li>
+</ul>
+</div>
 <h2 id="_1">局域网组网基础知识<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://docs.google.com/document/d/1XaeUVlaz5DASfP3kd21AV2oAwb32Zn0QezdytVUpsw0/edit?usp=sharing">局域网、互联设备与综合布线系统完全入门指南</a></p>
 <h2 id="_2">局域网互联设备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -8165,12 +8174,13 @@
 </li>
 <li>集线器<ul>
 <li>连接在一个集线器上的所有结点共享一个冲突域，而非每个结点</li>
-<li>连接到集线器的结点发送数据时采用CSMA/CD算法，是结点执行而非集线器执行</li>
+<li>连接到集线器的结点发送数据时采用CSMA/CD算法，是 <strong>结点执行</strong> 而非集线器执行</li>
 <li>通过在网络链路中串联一个集线器可以监听该链路中的数据包</li>
 <li>在物理层而非MAC层，不涉及帧的结构与处理</li>
 <li>发送数据以广播方式发送，不具有目的性，IP地址识别错，MAC地址识别错</li>
 <li>使用双绞线连接工作站</li>
 <li>IDS连接在集线器上可以获取和分析数据包；在网络中部署IDS时，可以用集线器代替分路器（TAP）</li>
+<li>连接到集线器的多个结点可以同时接受数据帧</li>
 </ul>
 </li>
 <li>网桥<ul>
@@ -8192,7 +8202,7 @@
 </ul>
 <blockquote>
 <p>不同的VLAN成员直接不能直接通信</p>
-<p>IEEE.802.1D 是当前流行的STP（生成树协议）标准</p>
+<p><strong>IEEE.802.1D</strong> 是当前流行的STP（生成树协议）标准</p>
 <p>采用RSA算法，网络中N个用户之间进行加密通信，需要密钥个数：2N 个</p>
 </blockquote>
 <h2 id="_3">综合布线系统网络结构设计<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
@@ -8280,14 +8290,14 @@
 <p>建筑群子系统可以是多种布线方式的任意组合，一般用双绞线错。</p>
 <p>能够对线缆保护最有利的方式是地下管道布线（管道内布线），较好的是巷道布线，最不利的是直埋布线。</p>
 <h3 id="_6">设备间子系统<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<h3 id="_7">管理子系统<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_7">干线子系统<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>干线线缆铺设经常采用点对点结合和分支结合两种方式</p>
+<h3 id="_8">管理子系统<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <ul>
 <li>管理子系统提供与其他子系统连接的手段</li>
 <li>用户可以通过在管理子系统中增加、交换、更改、扩展线缆来改变线缆路由</li>
 <li>管理子系统设置在楼层配线间内</li>
 </ul>
-<h3 id="_8">干线子系统<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>干线线缆铺设经常采用点对点结合和分支结合两种方式</p>
 <h3 id="_9">水平子系统<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
 <li>一般电缆长度不超过90ｍ</li>

@@ -18,7 +18,7 @@
         <link rel="prev" href="../%E7%AC%AC10%E7%AB%A0%20%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/">
       
       
-        <link rel="next" href="../%E5%A4%A7%E9%A2%98%E8%8D%9F%E8%90%83/">
+        <link rel="next" href="../%E7%BB%BC%E5%90%88%E9%A2%98/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -4020,11 +4020,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%A4%A7%E9%A2%98%E8%8D%9F%E8%90%83/" class="md-nav__link">
+      <a href="../%E7%BB%BC%E5%90%88%E9%A2%98/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    大题荟萃
+    综合题
   </span>
   
 
@@ -8062,13 +8062,13 @@
 <ul>
 <li>traps 或 informs：用于指定向这台主机是发送自陷信息还是发送通知(默认为发送自陷信息)。</li>
 <li>version 1 或 2c：用于指定是按照哪个版本的 SNMP 发送。</li>
-<li>udp-port：用于指定这台主机使用哪个 UDP 端口号接收通知(默认为 162)。<ul>
-<li>创建或修改SNMP视阈：snmp-server view</li>
+<li>udp-port：用于指定这台主机使用哪个 UDP 端口号接收通知(默认为 162)。</li>
+</ul>
+</li>
+<li>
+<p>创建或修改SNMP视阈：snmp-server view</p>
+</li>
 <li>指定端口断开或连接时向管理站发出通知：snmp trap link-status</li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -8078,7 +8078,7 @@
 <li>SNMP是基于UDP传输的</li>
 <li>MIB-2库中 <strong>计量器</strong> 类型的值可以增加也可以减少，<strong>计数器</strong> 类型的值只能增加不能减少</li>
 <li>出现自陷情况时，<strong>代理站会向管理站</strong> 发出包含团体字和TrapPDU的报文</li>
-<li>当管理站需要查询时，就像某个代理发出包含团体字和 <strong>GetRequestPDU</strong> 的报文</li>
+<li>当管理站需要查询时，就向某个代理发出包含团体字和 <strong>GetRequestPDU</strong> 的报文</li>
 <li>向管理站发出一条Inform通知而未收到确认消息时，会再次发送</li>
 </ul>
 <p>软件：</p>
@@ -8178,6 +8178,7 @@ Trace complete
 <details class="question">
 <summary>第在某Cisco路由器上使用命令<code>snmp-server host 202.113.77.5 system</code>进行SNMP设置，如果在管理站202.113.77.5上能够正常接收来自该路由器的通知，那么下列描述中错误的是 ( )。<br>*   A. 路由器上已用<code>snmp-server enable traps</code>设置了SNMP代理具有发出通知的功能<br>*   B. 路由器向管理站按照团体字public发送通知<br>*   C. 管理站202.113.77.5使用UDP的162端口接收通知<br>*   D. 路由器使用SNMPv1向管理站发送通知</summary>
 <p>正确答案：B</p>
+<p>改成：向管理站按照团体字system发送通知</p>
 </details>
 <h2 id="_1">网络攻击<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">攻击<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -8219,7 +8220,7 @@ Trace complete
 <li>ISS：ISS的System Scanner依附于主机上的扫描器代理侦测主机内部的漏洞</li>
 <li>X-Scanner：多线程的方式对指定IP地址段进行安全漏洞扫描，不涉及路由器交换机的扫描</li>
 <li>MBSA</li>
-<li>CVE：为每个漏洞确定了唯一的名称和标准化描述</li>
+<li>CVE（Common Vulnerabilities and Exposures）：为每个漏洞确定了唯一的名称和标准化描述</li>
 </ul>
 
 
@@ -8273,13 +8274,13 @@ Trace complete
         
         
           
-          <a href="../%E5%A4%A7%E9%A2%98%E8%8D%9F%E8%90%83/" class="md-footer__link md-footer__link--next" aria-label="Next: 大题荟萃">
+          <a href="../%E7%BB%BC%E5%90%88%E9%A2%98/" class="md-footer__link md-footer__link--next" aria-label="Next: 综合题">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                大题荟萃
+                综合题
               </div>
             </div>
             <div class="md-footer__button md-icon">
