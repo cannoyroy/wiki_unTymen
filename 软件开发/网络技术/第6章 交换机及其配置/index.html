@@ -3674,6 +3674,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -4073,6 +4077,48 @@
   
   <span class="md-ellipsis">
     第11章 网络管理技术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%80%89%E6%8B%A9%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    选择题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%BA%94%E7%94%A8%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    应用题
   </span>
   
 
@@ -8237,7 +8283,7 @@
 <li>Vlan通常用VLAN ID和VLAN name标识</li>
 <li>IEEE802.1Q协议规定，用于标识VLAN的VLAN ID用12bit表示，Vlan名最常用32个字符表示</li>
 <li>IEEE802.1Q协议规定，可以支持4096个VLAN，其中1~1005是标准范围，1006~1024为保留范围，1025~4096是扩展范围</li>
-<li><strong>以太网的VLAN ID范围是 1~1000，FDDU和令牌环网是100-1005，可用于Ethernet的VLAN ID为2~1000</strong></li>
+<li><strong>以太网的VLAN ID范围是 1~1000（有说法是2~1000），FDDI和令牌环网是1002-1005，可用于Ethernet的VLAN ID为2~1000</strong></li>
 <li>创建VLAN时，如果没有给定名字，则默认VLAN00XXX（XXX表示VLAN ID）</li>
 </ul>
 <p>VLAN划分方式：</p>
@@ -8468,13 +8514,21 @@ Cisco-3548(config-if)#spanning-tree portfast
 <p>生成树的增强功能</p>
 <ul>
 <li>PortFast：跳过侦听和学习阶段，<strong>减少终端接入网络的延迟</strong>。</li>
-<li>UplinkFast：快速启用备份端口，将端口从阻塞状态直接转化为转发状态<ul>
-<li>Catalyst 3500（Cisco IOS）：<code>spanning-tree uplinkfast max-update-rate &lt;0~32000&gt;</code></li>
+<li>UplinkFast：快速启用备份端口，将端口从阻塞状态直接转化为转发状态。直接链路<ul>
+<li>Catalyst 3500/3548（Cisco IOS）：<code>spanning-tree uplinkfast max-update-rate &lt;0~32000&gt;</code></li>
 <li>Catalyst6500（CatOS）：<code>set spantree uplinkfast enable rate &lt;station_update_rate&gt;</code></li>
 </ul>
 </li>
 <li>BackboneFast：省去端口状态转换等待的时间，提高间接链路失效的收敛速度</li>
-<li>BPDU Filtering：阻止端口发送或接收 BPDU</li>
+<li>
+<p>BPDU Filtering：阻止端口发送或接收 BPDU</p>
+</li>
+<li>
+<p><strong>PortFast / BPDU Guard / BPDU Filtering:</strong> 三者都与**接入层端口**（连接终端设备）相关，目的是提高终端设备连接速度和防止意外环路。BPDU Filtering最危险，慎用。</p>
+</li>
+<li><strong>UplinkFast / BackboneFast:</strong> 这两者是加速**STP收敛**的，UplinkFast针对**直连链路故障**（根端口/指定端口），BackboneFast针对**间接链路故障**（上游链路）。UplinkFast是旧的增强，RSTP/MSTP通常不再需要显式配置。</li>
+<li><strong>Root Guard / Loop Guard:</strong> 这两者是提高**STP拓扑安全性**和**稳定性**的。Root Guard防止不期望的根桥，Loop Guard防止阻塞端口的错误转发（单向链路故障）。</li>
+<li><strong>RSTP / MSTP:</strong> 这是STP的**现代替代品**，提供更快的收敛和更好的资源利用率。RSTP是STP的升级版，MSTP是在RSTP基础上为多VLAN环境设计的。</li>
 </ul>
 
 
